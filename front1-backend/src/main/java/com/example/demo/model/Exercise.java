@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,20 +10,20 @@ public class Exercise {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
-	private int workout_id;
+	private Long id;
+	private Long workout_id;
 	private String name;
 	private String description;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
-	public int getWorkout_id() {
+	public Long getWorkout_id() {
 		return workout_id;
 	}
-	public void setWorkout_id(int workout_id) {
+	public void setWorkout_id(Long workout_id) {
 		this.workout_id = workout_id;
 	}
 	public String getName() {
@@ -38,7 +38,7 @@ public class Exercise {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Exercise(int id, int workout_id, String name, String description) {
+	public Exercise(Long id, Long workout_id, String name, String description) {
 		super();
 		this.id = id;
 		this.workout_id = workout_id;
@@ -48,7 +48,7 @@ public class Exercise {
 	public Exercise() {
 		super();
 	}
-	public Exercise(int workout_id, String name, String description) {
+	public Exercise(Long workout_id, String name, String description) {
 		super();
 		this.workout_id = workout_id;
 		this.name = name;

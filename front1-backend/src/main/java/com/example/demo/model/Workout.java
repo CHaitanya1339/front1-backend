@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.model;
 
 import java.sql.Date;
 
@@ -12,21 +12,21 @@ public class Workout {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
-	private int user_id;
+	private Long id;
+	private Long user_id;
 	private Date date;
-	private int duration;
+	private String duration;
 	private String notes;
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
-	public int getUser_id() {
+	public Long getUser_id() {
 		return user_id;
 	}
-	public void setUser_id(int user_id) {
+	public void setUser_id(Long user_id) {
 		this.user_id = user_id;
 	}
 	public Date getDate() {
@@ -35,10 +35,10 @@ public class Workout {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public int getDuration() {
+	public String getDuration() {
 		return duration;
 	}
-	public void setDuration(int duration) {
+	public void setDuration(String duration) {
 		this.duration = duration;
 	}
 	public String getNotes() {
@@ -47,7 +47,7 @@ public class Workout {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
-	public Workout(int id, int user_id, Date date, int duration, String notes) {
+	public Workout(Long id, Long user_id, Date date, String duration, String notes) {
 		super();
 		this.id = id;
 		this.user_id = user_id;
@@ -55,7 +55,7 @@ public class Workout {
 		this.duration = duration;
 		this.notes = notes;
 	}
-	public Workout(int user_id, Date date, int duration, String notes) {
+	public Workout(Long user_id, Date date, String duration, String notes) {
 		super();
 		this.user_id = user_id;
 		this.date = date;

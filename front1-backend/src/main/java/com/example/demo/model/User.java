@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private Long id;
 	private String name;
 	private String email;
 	private String password;
@@ -18,10 +18,13 @@ public class User {
 	private double weight;
 	private int age;
 	private String gender;
-	public int getId() {
+	private String role;
+	private String goals;
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -66,8 +69,22 @@ public class User {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public User(int id, String name, String email, String password, double height, double weight, int age,
-			String gender) {
+
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+		public String getGoals() {
+		return goals;
+	}
+	public void setGoals(String goals) {
+		this.goals = goals;
+	}
+
+	public User(Long id, String name, String email, String password, double height, double weight, int age,
+			String gender, String role, String goals) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -77,8 +94,11 @@ public class User {
 		this.weight = weight;
 		this.age = age;
 		this.gender = gender;
+		this.role = role;
+		this.goals=goals;
 	}
-	public User(String name, String email, String password, double height, double weight, int age, String gender) {
+	public User(String name, String email, String password, double height, double weight, int age, String gender,
+			String role, String goals) {
 		super();
 		this.name = name;
 		this.email = email;
@@ -87,6 +107,8 @@ public class User {
 		this.weight = weight;
 		this.age = age;
 		this.gender = gender;
+		this.role = role;
+		this.goals=goals;
 	}
 	public User() {
 		super();

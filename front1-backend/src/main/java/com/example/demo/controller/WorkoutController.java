@@ -16,9 +16,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Exercise;
-
-import com.example.demo.entity.Workout;
+import com.example.demo.model.Exercise;
+import com.example.demo.model.Workout;
 import com.example.demo.repo.ExerciseRepo;
 import com.example.demo.repo.WorkoutRepo;
 
